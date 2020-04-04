@@ -31,7 +31,7 @@ def merge_sort(arr, left, right):
 
 
 def main():
-    a = [10,3,6,7,8,9,9,9]
+    a = [10,3,6,71,8,21,9,9]
     print(merge_sort(a,0,len(a)))
 
 main()

@@ -16,7 +16,7 @@ class Node():
         while tmp is not None:
             print(tmp.data)
             tmp = tmp.next
-            
+    
     def count_elements(self):
         tmp = self
         count = 0
@@ -24,3 +24,11 @@ class Node():
             count+=1
             tmp = tmp.next
         return count
+
+    def compare_to(self,node):
+        if self.data < node.data:
+            return -1
+        elif self.data > node.data:
+            return 1
+        else:
+            return 0

@@ -26,6 +26,9 @@ class ObjectPriorityQueue():
     def dequeue(self):
         return self.heap.pop()
 
+    def peek(self):
+        return self.heap.peek()
+
 
 def object_priority_queue_test():
     queue = ObjectPriorityQueue()

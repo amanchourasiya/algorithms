@@ -14,7 +14,7 @@ class MaxObjectHeap():
         return (i-1) // 2
     
     def is_leaf(self,i):
-        c1,c2 = self.get_child(i)
+        c1,_ = self.get_child(i)
         if c1 >= self.get_heap_size():
             return True
         else:
@@ -112,6 +112,10 @@ class MaxObjectHeap():
 
     def get_heap_size(self):
         return len(self.heap)
+    
+    def peek(self):
+        return self.heap[0]
+
 
 
 class MinObjectHeap():

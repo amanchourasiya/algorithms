@@ -29,6 +29,11 @@ class KruskalMst():
                     self.mst.append(node)
                     self.current_mst_length +=1
             self.pqueue.dequeue()
+        
+    def get_mst(self):
+        for edge in self.mst:
+            print(edge.v,edge.w)
+            
 
 
         

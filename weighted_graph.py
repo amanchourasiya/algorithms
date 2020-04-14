@@ -1,31 +1,24 @@
 
 class WeightedGraph():
     def __init__(self,v):
-        self.vertices = [None] * v
+        self.vertices = [[] for i in range(v)]
 
     def add_edge(self,v,w,weight):
         edge = Edge(v,w,weight)
 
-        if self.vertices[v] is None:
-            self.vertices[v] = Node(edge)
-        else:
-            self.vertices[v] = self.vertices[v].insert(edge)
-        
-        if self.vertices[w] is None:
-            self.vertices[w] = Node(edge)
-        else:
-            self.vertices[w] = self.vertices[w].insert(edge)
-    
+        self.vertices[v].append(edge)
+        self.vertices[w].append(edge)
+
+
     def adj(self,v):
         return self.vertices[v]
     
     def get_edges(self):
         ret = set()
         for vertex in self.vertices:
-            tmp = vertex
-            while tmp is not None:
-                ret.add(tmp)
-                tmp = tmp.next
+            for node in vertex:
+                ret.add(node)
+                
         return ret
 
 

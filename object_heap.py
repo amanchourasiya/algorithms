@@ -19,6 +19,12 @@ class MaxObjectHeap():
             return True
         else:
             return False
+    
+    def is_empty(self):
+        if len(self.heap) == 0:
+            return True
+        else:
+            False
 
 
     def has_one_child(self,i):
@@ -56,6 +62,9 @@ class MaxObjectHeap():
                 break
     
     def pop(self):
+        if len(self.heap) == 0:
+            return None
+
         ret = copy.deepcopy(self.heap[0])
         self.heap[0] = copy.deepcopy(self.heap[-1])
         del(self.heap[-1])
@@ -90,7 +99,7 @@ class MaxObjectHeap():
                 break
 
             child1_index,child2_index = self.get_child(parent_index)
-            print(child1_index,child2_index)
+            #print(child1_index,child2_index)
              
             # If there is only one child then there is only one possibility of swapping and 
             # no further swapping will be possible

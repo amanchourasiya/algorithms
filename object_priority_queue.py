@@ -28,6 +28,9 @@ class ObjectPriorityQueue():
 
     def peek(self):
         return self.heap.peek()
+    
+    def is_empty(self):
+        return self.heap.is_empty()
 
 
 def object_priority_queue_test():
@@ -41,4 +44,4 @@ def object_priority_queue_test():
         print(traverse_heap(queue.heap.heap))
         print(queue.dequeue().data)
 
-object_priority_queue_test()
+#object_priority_queue_test()

@@ -41,7 +41,7 @@ class Edge():
     def get_weight(self):
         return self.weight
 
-    def comapare_to(self,edge):
+    def compare_to(self,edge):
         if self.weight < edge.weight:
             return -1
         elif self.weight > edge.weight:
@@ -63,7 +63,7 @@ class Node():
     def traverse_list(self):
         tmp = self
         while tmp is not None:
-            print(tmp.edge.v,tmp.edge.w,tmp.edge.weight)
+            #print(tmp.edge.v,tmp.edge.w,tmp.edge.weight)
             tmp = tmp.next
 
     def comapare_to(self,node):

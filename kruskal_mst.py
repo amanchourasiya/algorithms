@@ -10,7 +10,7 @@ class KruskalMst():
         self.current_mst_length = 0
         self.mst = []
         self.union = UnionFind(len(weighted_graph.vertices))
-        self.edges = weighted_graph.get_edges()
+        self.edges = weighted_graph.get_all_edges()
         self.fill_pq()
         self.createMst()
 

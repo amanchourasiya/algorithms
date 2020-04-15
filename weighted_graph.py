@@ -13,13 +13,16 @@ class WeightedGraph():
     def adj(self,v):
         return self.vertices[v]
     
-    def get_edges(self):
+    def get_all_edges(self):
         ret = set()
         for vertex in self.vertices:
             for node in vertex:
                 ret.add(node)
                 
         return ret
+    
+    def get_edges(self,v):
+        return self.vertices[v]
 
 
 

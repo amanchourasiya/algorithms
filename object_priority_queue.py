@@ -17,7 +17,7 @@ if a == b: return 0
 
 class ObjectPriorityQueue():
     def __init__(self):
-        self.heap = MaxObjectHeap()
+        self.heap = MinObjectHeap()
 
     def enqueue(self,node):
         self.heap.push(node)

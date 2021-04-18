@@ -20,7 +20,7 @@ class WeightedGraph():
                 ret.add(node)
                 
         return ret
-    
+        
     def get_edges(self,v):
         return self.vertices[v]
 

@@ -232,7 +232,10 @@ class MinObjectHeap():
                     break
         
         return ret
-        
+
+    def decrease_key(self, node, weight):
+        pass
+
     def swap_values(self,i,j):
         #print(self.heap[i].data,self.heap[j].data)
         tmp = copy.deepcopy(self.heap[i])
